@@ -1,0 +1,10 @@
+.text-center{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.custom{
+    color: #ffffff;
+    font-weight: bold;
+    font-style: italic;
+}

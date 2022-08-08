@@ -1,0 +1,62 @@
+    
+    <!--Diretivas de atributos-->
+    <h2 class="text-success text-center">Diretivas do angular</h2>
+
+
+    <div [ngStyle]="{background: count <= 5 ? 'red' : 'green'}"
+        [ngClass]="{custom: count > 5}"
+    >
+        <h2 class="text-center">Contador: {{count}}</h2>
+    </div>
+    
+
+    <!--Diretivas Estruturais-->
+
+    
+    <div  *ngIf="count === 10;else time" class="text-center">
+        <h2 [ngStyle]="{background: count === 10 ? 'lightgrey': 'green'}">
+        Count stop!</h2>
+    </div>
+
+    
+    <ng-template #time>
+        <h2>Timer is ending....</h2>
+    </ng-template>
+    
+<ul [ngSwitch]="count " class="list-group mx-auto col-3">
+    <li class="list-group-item" *ngSwitchCase="3">
+        oi
+    </li>
+    <li class="list-group-item" *ngSwitchCase="5">
+        oi
+    </li>
+    <li class="list-group-item" *ngSwitchCase="7">
+        oi
+    </li>
+    <li class="list-group-item" *ngSwitchDefault>
+        default
+    </li>
+</ul>
+
+<dir-list-people></dir-list-people>
+
+<ul class="col-4 mx-auto">
+    <input type="text"
+    placeholder="Digite seu nome e sobrenome"
+    [(ngModel)]="text"
+    class="form-control">
+
+    <h4 dirMarkText colorBack="pink" colorText="white">Seu nome e sobrenome: {{text}}</h4>
+</ul>
+
+
+
+<div class="container ">
+    <div class="row d-flex alings-items-center justify-content-center">
+        <h2 class="text-center my-2">Lista de personagens da serie Rick and Morty</h2>
+        <div class="col-12">
+            <dir-list-api></dir-list-api>
+        </div>
+    </div>
+</div>
+

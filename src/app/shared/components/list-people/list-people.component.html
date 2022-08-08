@@ -1,0 +1,12 @@
+<div class="list-group mx-auto my-3 col-3">
+    <li class="list-group-item" 
+        *ngFor="let pessoa of pessoas"
+        >
+    O nome da pessoa é : {{pessoa.firstName}}, 
+    seu sobrenome é: {{pessoa.lastName}} 
+    e sua idade é : {{pessoa.age}} anos
+    </li>
+
+    <button class="btn btn-primary" (click)="clickme('rafael')">Clique me</button>
+
+</div>
